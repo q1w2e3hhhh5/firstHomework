@@ -7,13 +7,27 @@ public class StringDrill {
     }
 
     public boolean startsBy(String sub){
-        System.out.println(v.substring(0,0));
-        if (v.substring(0,1).equals(sub)){
+        if (v.substring(0,sub.length()).equals(sub)){
             return true;
-        }else
+        }else {
             return false;
+        }
     }
 
+    public int nbOfOccurences(String sub){
 
+        int nbOfOccurences = 0;
+        int subSize = sub.length();
+        for(int i = 0 ; i < v.length() ; i++){
+            if( v.substring(i,subSize).equals(sub) ){
+                nbOfOccurences++;
+            }else{
+                continue;
+            }
+        }
+
+
+       return nbOfOccurences;
+    }
 
 }
