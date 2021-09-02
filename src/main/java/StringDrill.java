@@ -19,10 +19,11 @@ public class StringDrill {
         int nbOfOccurences = 0;
         int subSize = sub.length();
         for(int i = 0 ; i < v.length() ; i++){
-            if( v.substring(i,subSize).equals(sub) ){
+            if( ){
+                return nbOfOccurences;
+            }
+            if( v.substring(i,subSize+i).equals(sub) ){
                 nbOfOccurences++;
-            }else{
-                continue;
             }
         }
 
