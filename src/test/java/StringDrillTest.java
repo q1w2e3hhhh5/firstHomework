@@ -8,8 +8,8 @@ public class StringDrillTest extends TestCase {
     }
 
     public void testNbOfOccurences() {
-        StringDrill str = new StringDrill("tututututututututu");
-        assertEquals(str.nbOfOccurences("tu"),2);
+        StringDrill str = new StringDrill("tututu");
+        assertEquals(str.nbOfOccurences("tu"),3);
     }
 
 
