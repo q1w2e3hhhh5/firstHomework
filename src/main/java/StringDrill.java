@@ -7,7 +7,8 @@ public class StringDrill {
     }
 
     public boolean startsBy(String sub){
-        if (v.substring(0).equals(sub)){
+        System.out.println(v.substring(0,0));
+        if (v.substring(0,1).equals(sub)){
             return true;
         }else
             return false;
