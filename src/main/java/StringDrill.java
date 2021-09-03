@@ -40,14 +40,20 @@ public class StringDrill {
         for (int i = 0; i < v.length(); i++) {
             if (v.startsWith(delim, i) ){
                 index++;
+                
+
                 if(index == n){
+                    System.out.println("first "+i);
                     firstMark = i +1;
                 }
                 if(index == n+1){
+                    System.out.println("last "+i);
                     lastMark = i;
                 }
+
             }
         }
+        System.out.println(v.substring(firstMark,lastMark));
         return v.substring(firstMark,lastMark);
     }
 }

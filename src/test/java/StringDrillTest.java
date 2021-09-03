@@ -14,8 +14,12 @@ public class StringDrillTest extends TestCase {
 
     public void testSubSplit() {
         StringDrill str = new StringDrill("bob,math,julien,gojo");
-        assertEquals(str.subSplit(2,","),"julien");
+        assertEquals(str.subSplit(1,","),"math");
     }
 
 
+    public void testSubSplitBeyondDelim() {
+        StringDrill str = new StringDrill("bob,math,julien,gojo");
+        assertEquals(str.subSplit(1,","),"math");
+    }
 }
