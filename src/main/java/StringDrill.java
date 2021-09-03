@@ -7,6 +7,11 @@ public class StringDrill {
     }
 
     public boolean startsBy(String sub){
+
+        if (sub==(null) || sub.equals("")){
+            throw new IllegalArgumentException("sub cannot be null or empty");
+        }
+
         if (v.startsWith(sub)){
             return true;
         }else {
@@ -15,6 +20,10 @@ public class StringDrill {
     }
 
     public int nbOfOccurences(String sub){
+
+        if (sub==(null) || sub.equals("")){
+            throw new IllegalArgumentException("sub cannot be null or empty");
+        }
 
         int nbOfOccurences = 0;
         int subSize = sub.length();
@@ -35,25 +44,25 @@ public class StringDrill {
     public String subSplit(int n,String delim) {             //  bob,math,julien,gojo
         int index = 0;
         int firstMark = 0;
-        int lastMark = 0;
+        int nextMark = 0;
+        //int lastMark = 0;
+
+        if (delim==(null) || delim.equals("") || n<0){
+            throw new IllegalArgumentException("delim cannot be null or empty and n cannot be negative");
+        }
 
         for (int i = 0; i < v.length(); i++) {
             if (v.startsWith(delim, i) ){
                 index++;
-                
-
                 if(index == n){
-                    System.out.println("first "+i);
                     firstMark = i +1;
                 }
+                //code how to get only the last element
                 if(index == n+1){
-                    System.out.println("last "+i);
-                    lastMark = i;
+                    nextMark = i;
                 }
-
             }
         }
-        System.out.println(v.substring(firstMark,lastMark));
-        return v.substring(firstMark,lastMark);
+        return v.substring(firstMark,nextMark);
     }
 }
