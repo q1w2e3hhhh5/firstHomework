@@ -34,6 +34,9 @@ public class StringDrill {
                     break;
                 }
             }
+            if(i==v.length()-1){
+                break;
+            }
             if( v.substring(i,subSize+i).equals(sub) ){
                 nbOfOccurences++;
             }
