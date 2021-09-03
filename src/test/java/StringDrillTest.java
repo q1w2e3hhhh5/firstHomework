@@ -27,10 +27,16 @@ public class StringDrillTest extends TestCase {
         fail();
     }
 
-    public void testNbOfOccurences() {
+    public void testNbOfOccurencesEvenLenght() {
         StringDrill str = new StringDrill("tututu");
         assertEquals(str.nbOfOccurences("tu"),3);
     }
+
+    public void testNbOfOccurencesOddLenght() {
+        StringDrill str = new StringDrill("tutuu");
+        assertEquals(str.nbOfOccurences("tu"),2);
+    }
+
     public void testNbOfOccurencesEmpty() {
         StringDrill str = new StringDrill("tututu");
         try{

@@ -21,8 +21,8 @@ public class StringDrill {
 
     public int nbOfOccurences(String sub){
 
-        if (sub==(null) || sub.equals("")){
-            throw new IllegalArgumentException("sub cannot be null or empty");
+        if (sub==(null) || sub.equals("") || sub.length() > v.length()){
+            throw new IllegalArgumentException("sub cannot be null, empty or larger than the str");
         }
 
         int nbOfOccurences = 0;
@@ -57,7 +57,9 @@ public class StringDrill {
                 if(index == n){
                     firstMark = i +1;
                 }
+
                 //code how to get only the last element
+
                 if(index == n+1){
                     nextMark = i;
                 }
