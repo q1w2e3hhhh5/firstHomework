@@ -12,5 +12,10 @@ public class StringDrillTest extends TestCase {
         assertEquals(str.nbOfOccurences("tu"),3);
     }
 
+    public void testSubSplit() {
+        StringDrill str = new StringDrill("bob,math,julien,gojo");
+        assertEquals(str.subSplit(2,","),"julien");
+    }
+
 
 }

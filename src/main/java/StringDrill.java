@@ -29,9 +29,20 @@ public class StringDrill {
                 nbOfOccurences++;
             }
         }
-
-
        return nbOfOccurences;
     }
 
+    public String subSplit(int n,String delim) {             //  bob,math,julien,gojo
+
+        String str = "";
+        //code
+        for (int i = 0; i < v.length(); i++) {
+            if ( ){
+
+            }
+
+
+        }
+        return str;
+    }
 }
